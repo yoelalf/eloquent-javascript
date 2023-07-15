@@ -1,13 +1,31 @@
+const H2_RESULT = document.querySelector('#result');
+
+//RESULT FUNCTION
+ShowResult = (result) =>{
+    const initialElement = document.createElement("h2");
+    const textNode = document.createTextNode(result);
+    initialElement.appendChild(textNode);
+    H2_RESULT.appendChild(initialElement);
+}
+
+CheckEmpty = () => {
+    if(H2_RESULT.innerHTML != ''){
+        H2_RESULT.innerHTML = ''
+    }
+}
+
 
 TriangleHash = () =>{
+    CheckEmpty();
     let row = 7;
     let hash = '';
     for(let i = 0; i < row;i++){
         hash += '#'
-        console.log(hash)
+        ShowResult(hash)
     }
 }
 TriangleHashCustom = () =>{
+    CheckEmpty();
     let row = 5;
     let col = 3;
     let hash = [``];
@@ -16,12 +34,13 @@ TriangleHashCustom = () =>{
             hash.push(`#`)
         }
         let hashNew = hash.join('')
-        console.log(hashNew)
+        ShowResult(hashNew)
         hash = [``]
     }
 }
 
 FizzBuzz = () =>{
+    CheckEmpty();
     for(let i = 1;i<=100;i++){
         if((i % 3 === 0) && (i % 5 === 0))
         {
@@ -43,6 +62,7 @@ FizzBuzz = () =>{
 }
 
 ChessBoard = () =>{
+    CheckEmpty();
     let row = 8;
     let hash = [];
     for(let i =0; i< row;i++){
@@ -68,7 +88,8 @@ ChessBoard = () =>{
 }
 
 //More Concise Solutions to Chessboard
-ChessBoard1 = () =>{
+ChessBoardConcise = () =>{
+    CheckEmpty();
     var size = 8; //this is the variable setting
 
     var board = "";//this is the empty string we're going to add either ' ' , '#' or newline
