@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale 1.0">
-        <link rel="stylesheet" src="./styles.css">
+        <link rel="stylesheet" href="./styles.css">
         <title>Eloquent JavaScript Excersises - Yoel</title>
     </head>
     <body>
@@ -16,20 +16,40 @@
                     Chapter 2 - Program Stucture
                 </legend>
                 <button class="button" onclick="TriangleHash()">Triangle Hash</button>
-                <button class="button" onclick="TriangleHashCustom()">Triangle Hash Custom</button>
+                <fieldset id="triangle-hash-custom">
+                    <legend>Triangle Hash Custom Input</legend>
+                    <label>
+                        Rows :
+                        <input type="number" id="th-rows">
+                    </label>
+                    <label>
+                        Columns:
+                        <input type="number" id="th-cols">
+                    </label>
+                    <button class="button" onclick="TriangleHashCustom()">Triangle Hash Custom</button>
+                </fieldset>
+                
                 <button class="button" onclick="FizzBuzz()">Fizz Buzz</button>
                 <button class="button" onclick="ChessBoard()">Chessboard</button>
             </fieldset>
             <fieldset>
                 <legend>
-                    Chapter 3 - Function Exponential and Power
+                    Chapter 3 - Functions
                 </legend>
                 <section id="power">
                     <label>
                         Number to Power :
-                        <input type="number" min="0">
+                        <input type="number" min="0" id="num-pow">
                     </label>
                     <button class="button" onclick="Power()">Power</button>
+                    <p></p>
+                </section>
+                <section id="factorial">
+                    <label>
+                        Number to Factorial :
+                        <input type="number" min="0" id="num-fact">!
+                    </label>
+                    <button class="button" onclick="Factorial()">Power</button>
                     <p></p>
                 </section>
             </fieldset>

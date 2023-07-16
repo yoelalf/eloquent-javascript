@@ -1,6 +1,7 @@
 const H2_RESULT = document.querySelector('#result');
 
 //RESULT FUNCTION
+//Chapter 2 - Program Structure
 ShowResult = (result) =>{
     const initialElement = document.createElement("h2");
     const textNode = document.createTextNode(result);
@@ -8,7 +9,7 @@ ShowResult = (result) =>{
     H2_RESULT.appendChild(initialElement);
 }
 
-CheckEmpty = () => {
+ClearResult = () => {
     if(H2_RESULT.innerHTML != ''){
         H2_RESULT.innerHTML = ''
     }
@@ -16,7 +17,7 @@ CheckEmpty = () => {
 
 
 TriangleHash = () =>{
-    CheckEmpty();
+    ClearResult();
     let row = 7;
     let hash = '';
     for(let i = 0; i < row;i++){
@@ -25,9 +26,9 @@ TriangleHash = () =>{
     }
 }
 TriangleHashCustom = () =>{
-    CheckEmpty();
-    let row = 5;
-    let col = 3;
+    ClearResult();
+    const row = parseInt(document.querySelector('#th-rows').value)
+    const col = parseInt(document.querySelector('#th-cols').value)
     let hash = [``];
     for(let i = 0; i < row;i++){
         for(let j=0; j<col;j++){
@@ -37,32 +38,34 @@ TriangleHashCustom = () =>{
         ShowResult(hashNew)
         hash = [``]
     }
+    document.querySelector('#th-rows').value = ''
+    document.querySelector('#th-cols').value = ''
 }
 
 FizzBuzz = () =>{
-    CheckEmpty();
+    ClearResult();
     for(let i = 1;i<=100;i++){
         if((i % 3 === 0) && (i % 5 === 0))
         {
-            console.log("FizzBuzz")
+            ShowResult(`${i} - Fizz Buzz`)
         }
         else if(i % 3 === 0)
         {
-            console.log('Fizz')
+            ShowResult(`${i} - Fizz`)
         }
         else if(i % 5 === 0 )
         {
-            console.log('Buzz')
+            ShowResult(`${i} - Buzz`)
         }
         else
         {
-            console.log(i)
+            ShowResult(`${i}`)
         }
     }
 }
 
 ChessBoard = () =>{
-    CheckEmpty();
+    ClearResult();
     let row = 8;
     let hash = [];
     for(let i =0; i< row;i++){
@@ -89,7 +92,7 @@ ChessBoard = () =>{
 
 //More Concise Solutions to Chessboard
 ChessBoardConcise = () =>{
-    CheckEmpty();
+    ClearResult();
     var size = 8; //this is the variable setting
 
     var board = "";//this is the empty string we're going to add either ' ' , '#' or newline
@@ -103,4 +106,25 @@ ChessBoardConcise = () =>{
     }
     board += "\n";
     }
+}
+
+
+//Chapter 3 - Functions
+Power = () =>{
+    ClearResult()
+    const numPower = parseInt(document.querySelector('#num-pow').value)
+    ShowResult(numPower * numPower)
+}
+
+Factorial = () =>{
+    ClearResult()
+    const numFact = parseInt(document.querySelector('#num-fact').value)
+    let result = 0;
+    const FactorialFuntion = (n) =>{
+        if(n === 1) return 1;
+        return n * FactorialFuntion(n - 1)
+    }
+    result = FactorialFuntion(numFact)
+    ShowResult(result)
+    
 }
