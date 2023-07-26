@@ -110,6 +110,13 @@ ChessBoardConcise = () =>{
 
 
 //Chapter 3 - Functions
+Halve = (id) => {
+    ClearResult( )
+    let value = parseInt(document.getElementById(id).value)
+    ShowResult(value / 2)
+    document.getElementById(id).value = ''
+}
+
 Power = () =>{
     ClearResult()
     const numPower = parseInt(document.querySelector('#num-pow').value)
@@ -128,3 +135,17 @@ Factorial = () =>{
     ShowResult(result)
     
 }
+
+Exponential = () => {
+    ClearResult()
+    let num = parseInt(document.getElementById('num-to-exponent').value)
+    let exp = parseInt(document.getElementById('num-exponent').value)
+    let base = 1
+    for(let i = 0; i < exp; i++){
+        base = base * num
+    }
+    ShowResult(base)
+    document.getElementById('num-to-exponent').value = ''
+    document.getElementById('num-exponent').value = ''
+}
+

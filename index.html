@@ -1,62 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale 1.0">
-        <link rel="stylesheet" href="./styles.css">
-        <title>Eloquent JavaScript Excersises - Yoel</title>
-    </head>
-    <body>
-        <header>
-            <h1>Eloquent JavaScript Solutions by Yoel Alfandi</h1>
-        </header>
-        <main>
-            <fieldset>
-                <legend>
-                    Chapter 2 - Program Stucture
-                </legend>
-                <button class="button" onclick="TriangleHash()">Triangle Hash</button>
-                <fieldset id="triangle-hash-custom">
-                    <legend>Triangle Hash Custom Input</legend>
-                    <label>
-                        Rows :
-                        <input type="number" id="th-rows">
-                    </label>
-                    <label>
-                        Columns:
-                        <input type="number" id="th-cols">
-                    </label>
-                    <button class="button" onclick="TriangleHashCustom()">Triangle Hash Custom</button>
-                </fieldset>
-                
-                <button class="button" onclick="FizzBuzz()">Fizz Buzz</button>
-                <button class="button" onclick="ChessBoard()">Chessboard</button>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale 1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Eloquent JavaScript Excersises - Yoel</title>
+</head>
+
+<body>
+    <header>
+        <h1>Eloquent JavaScript Solutions by Yoel Alfandi</h1>
+    </header>
+    <main>
+        <fieldset>
+            <legend>
+                Chapter 2 - Program Stucture
+            </legend>
+            <button class="button" onclick="TriangleHash()">Triangle Hash</button>
+            <fieldset id="triangle-hash-custom">
+                <legend>Triangle Hash Custom Input</legend>
+                <label>
+                    Rows :
+                    <input type="number" id="th-rows">
+                </label>
+                <label>
+                    Columns:
+                    <input type="number" id="th-cols">
+                </label>
+                <button class="button" onclick="TriangleHashCustom()">Triangle Hash Custom</button>
             </fieldset>
-            <fieldset>
-                <legend>
-                    Chapter 3 - Functions
-                </legend>
-                <section id="power">
-                    <label>
-                        Number to Power :
-                        <input type="number" min="0" id="num-pow">
-                    </label>
-                    <button class="button" onclick="Power()">Power</button>
-                    <p></p>
-                </section>
-                <section id="factorial">
-                    <label>
-                        Number to Factorial :
-                        <input type="number" min="0" id="num-fact">!
-                    </label>
-                    <button class="button" onclick="Factorial()">Power</button>
-                    <p></p>
-                </section>
-            </fieldset>
-            <h2>Result will be shown here:</h2>
-            <div id="result"></div>
-        </main>
-        <footer></footer>
-        <script src="./script.js"></script>
-    </body>
+
+            <button class="button" onclick="FizzBuzz()">Fizz Buzz</button>
+            <button class="button" onclick="ChessBoard()">Chessboard</button>
+        </fieldset>
+        <fieldset>
+            <legend>
+                Chapter 3 - Functions
+            </legend>
+            <section id="halve">
+                <label>
+                    Number to Halve :
+                    <input type="number" min="0" id="num-halve">
+                </label>
+                <button class="button" onclick="Halve('num-halve')">Halve Number</button>
+                <p></p>
+            </section>
+            <section id="power">
+                <label>
+                    Number to Power :
+                    <input type="number" min="0" id="num-pow">
+                </label>
+                <button class="button" onclick="Power()">Power</button>
+                <p></p>
+            </section>
+            <section id="factorial">
+                <label>
+                    Number to Factorial :
+                    <input type="number" min="0" id="num-fact">!
+                </label>
+                <button class="button" onclick="Factorial()">Factorial</button>
+                <p></p>
+            </section>
+            <section id="exponential">
+                <label>
+                    Number :
+                    <input type="number" min="0" id="num-to-exponent">
+                </label>
+                <label>
+                    Exponential :
+                    <input type="number" min="0" id="num-exponent">
+                </label>
+                <button class="button" onclick="Exponential()">Exponent</button>
+                <p></p>
+            </section>
+
+        </fieldset>
+        <h2>Result will be shown here:</h2>
+        <div id="result"></div>
+    </main>
+    <footer></footer>
+    <script src="./script.js"></script>
+</body>
+
 </html>
